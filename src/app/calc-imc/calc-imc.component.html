@@ -1,0 +1,21 @@
+    <p>&#10162; O Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal.</p>
+    <form> 
+        <div class="resultado">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" alt="Angular logo.">
+            <br>
+            <output [value]="imc">IMC</output>
+            <br>
+            <output [value]="classificacao">Classificação</output>
+        </div>
+        <br>
+        <div class="valores">
+            <input type="number" name="peso" [(ngModel)]="peso" placeholder="Digite o seu PESO" required>
+            <br>
+            <input type="number" name="altura" [(ngModel)]="altura" placeholder="Digite a sua ALTURA" required>
+        </div>
+
+        <div class="botoes">
+            <button type="button" class="btn-calcular" (click)="calcular()" >Calcular</button>
+            <button type="button" class="btn-limpar" (click)="limpar()">CE</button>
+        </div>
+    </form>
